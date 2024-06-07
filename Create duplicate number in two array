@@ -1,0 +1,19 @@
+#include <stdio.h>
+void findDuplicateNumbers(int arr1[], int n1, int arr2[], int n2) {
+    for (int i = 0; i < n1; ++i) {
+        for (int j = 0; j < n2; ++j) {
+            if (arr1[i] == arr2[j]) {
+                printf("Duplicate found: %d\n", arr1[i]);
+            }
+        }
+    }
+}
+int main() {
+    int arr1[] = {2, 5, 8, 5, 12, 8, 10, 2, 15};
+    int n1 = sizeof(arr1) / sizeof(arr1[0]);
+    int arr2[] = {5, 8, 10, 15, 20};
+    int n2 = sizeof(arr2) / sizeof(arr2[0]);
+    printf("Duplicate numbers in the two arrays:\n");
+    findDuplicateNumbers(arr1, n1, arr2, n2);
+    return 0;
+}
